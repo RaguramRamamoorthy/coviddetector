@@ -4,8 +4,6 @@ from imageclassification import predict_image_class
 
 
 st.title("COVID 19 Detector App")
-st.sidebar.write("COVID 19 Detector App")
-
 st.text("Upload a Chext X-Ray for diagnosis")
 
 uploaded_file = st.file_uploader("Choose a Chest X-Ray....",type=["png","jpg","jpeg"])
