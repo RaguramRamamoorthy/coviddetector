@@ -2,7 +2,6 @@ import torch
 import torchvision
 import numpy as np
 
-
 # Load the model and set in eval
 resnet18 = torchvision.models.resnet18(pretrained=True)
 resnet18.fc = torch.nn.Linear(in_features=512, out_features=3)
@@ -38,3 +37,15 @@ def predict_image_class(image):
     predicted_class_name = class_names[predicted_class_index]
 
     return probabilities, predicted_class_index, predicted_class_name
+
+
+st.text("If you need Chest-Xray images for testing the App")
+st.text("download a zip folder from here...")
+
+with open("images.zip", "rb") as fp:
+    btn = st.download_button(
+        label="Download ZIP",
+        data=fp,
+        file_name="images.zip",
+        mime="application/zip"
+    )
