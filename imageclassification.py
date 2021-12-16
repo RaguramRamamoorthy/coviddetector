@@ -39,13 +39,4 @@ def predict_image_class(image):
     return probabilities, predicted_class_index, predicted_class_name
 
 
-st.text("If you need Chest-Xray images for testing the App")
-st.text("download a zip folder from here...")
 
-with open("images.zip", "rb") as fp:
-    btn = st.download_button(
-        label="Download ZIP",
-        data=fp,
-        file_name="images.zip",
-        mime="application/zip"
-    )
