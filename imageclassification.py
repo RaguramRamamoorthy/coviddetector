@@ -27,6 +27,7 @@ test_transform = torchvision.transforms.Compose([
 
 def predict_image_class(image):
     # image = Image.open(image_path).convert('RGB')
+    image = image.convert('RGB')
     image = test_transform(image)
     # Please note that the transform is defined already in a previous code cell
     image = image.unsqueeze(0)
